@@ -4,8 +4,9 @@
   "sideEffects": false,
   "scripts": {
     "build": "remix build",
-    "dev": "remix dev -c \"npm run dev:serve\"",
+    "dev": "concurrently 'npm run dev:css' 'remix dev -c \"npm run dev:serve\"'",
     "dev:serve": "binode --require ./mocks -- @remix-run/serve:remix-serve ./build/index.js",
+    "dev:css": "tailwindcss -w -i ./app/tailwind.css -o ./app/app.css",
     "format": "prettier --write .",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
     "setup": "prisma generate && prisma migrate deploy && prisma db seed",
@@ -56,6 +57,7 @@
     "cookie": "^0.6.0",
     "cross-env": "^7.0.3",
     "cypress": "^13.7.1",
+    "daisyui": "^4.10.2",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.1",
