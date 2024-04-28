@@ -9,7 +9,7 @@
     "dev:css": "tailwindcss -w -i ./app/tailwind.css -o ./app/app.css",
     "format": "prettier --write .",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
-    "setup": "prisma generate && prisma migrate deploy && prisma db seed",
+    "setup": "prisma generate && prisma migrate deploy",
     "start": "remix-serve ./build/index.js",
     "start:mocks": "binode --require ./mocks -- @remix-run/serve:remix-serve ./build/index.js",
     "test": "vitest",
