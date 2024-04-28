@@ -39,7 +39,7 @@ export default function Index() {
             </div>
             <div className="sticky bottom-0">
               <form className="flex items-end">
-                <textarea placeholder="Bio" className="flex-1 textarea textarea-bordered textarea-lg w-full" ></textarea>
+                <textarea placeholder="Enter chat message.." className="flex-1 textarea textarea-bordered textarea-lg w-full" ></textarea>
                 <button className="btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r-md">Send</button>
               </form>
             </div>
